@@ -3,6 +3,9 @@ library(odpc)
 library(gdpc)
 library(tvReg)
 
+
+##Databases from https://cnecovid.isciii.es/covid19/resources/casos_hosp_uci_def_sexo_edad_provres.csv. The datos_edades.csv dataframe is created by adding the daily values of the original #age ranges (every 10 years) for each of the different indicators (positives, hospitalizations, ICU and deaths) to obtain the daily indicators for the age groups that we work with #(20-49,50-69,70,79,80+ and All). 
+
 #### Read the daily positive cases, hospitalizations, ICU admissions and deaths for each group age
 indicador <- read.csv("datos_edades.csv") #database with information from 2020-05-11 to 2022-03-27
 indicador <- indicador[,-1]
